@@ -1,32 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
+import TableCell from "./TableCell";
 
+const TableRow = (props) => {
+  let columns = [];
 
-class TableRow extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      rowArr: [],
-    }
+  // Handles the amount of columns for the grid
+  for (let i = 0; i < props.totalCols; i++) {
+    columns.push(
+      <TableCell key={i} changeColor={props.changeColor}/>
+    );
   }
-
-  AddRow = () =>{
-    // let rowArr = [];
-    this.state.rowArr.forEach((cell) => {
-      this.props.push(cell)
-      console.log(this.state.rowArr)
-    })
-  }
-
-render(){
-  return(
-    <div>
-      <tr>{this.AddRow}</tr>
-    </div>
-  )
-    
-  
-}
-}
-
+console.log(columns)
+  return <tr>{columns}</tr>;
+};
 
 export default TableRow;
