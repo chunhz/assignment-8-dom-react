@@ -1,16 +1,18 @@
-import react, { Component } from "react";
+import React, { Component } from "react";
 
-class TableCell extends Component{
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-  }
-
-  render() {
-    return {}
-  }
+function TableCell(props){
+ 
+    return( 
+      <td style= {{
+        width: "30px", 
+        height: "30px", 
+        backgroundColor: "Blue",
+      }} 
+        
+        onMouseDown={props.mouseDown} 
+        onMouseEnter={props.mouseEnter} 
+        onMouseUp={props.mouseUp} ></td>
+    )
 }
 
 export default TableCell;
