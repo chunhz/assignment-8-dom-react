@@ -17,7 +17,6 @@ class TableCell extends Component {
     return (<td onClick={this.setColor} style = {{
       width: "30px", 
       height: "30px", 
-      border: "black solid",
       backgroundColor: pcolor
     }} 
     ></td>)
